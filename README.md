@@ -56,7 +56,7 @@ ruby httpfinger.rb github.com
 ruby httpfinger.rb https://github.com
 ```
 
-*Example output:
+*Example output:*
 
 ```
 URL: https://github.com/
