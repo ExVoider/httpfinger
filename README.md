@@ -34,7 +34,7 @@ cd httpfinger
 Install Bundler:
 
 ```
-bundle install
+gem install bundler
 ```
 
 Install dependencies:
