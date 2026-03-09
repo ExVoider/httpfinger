@@ -1,7 +1,3 @@
-# httpfinger
-
-A simple Ruby CLI tool to fingerprint websites by fetching HTTP details such as status, redirects, headers, and page title.
-
 ## Features
 
 - Fetches a URL and shows the final response
@@ -20,7 +16,6 @@ A simple Ruby CLI tool to fingerprint websites by fetching HTTP details such as 
 ## Requirements
 
 - Ruby
-- Bundler
 
 ## Installation
 
@@ -29,18 +24,6 @@ Clone the repository:
 ```bash
 git clone https://github.com/ExVoider/httpfinger.git
 cd httpfinger
-```
-
-Install Bundler:
-
-```
-gem install bundler
-```
-
-Install dependencies:
-
-```
-bundle install
 ```
 
 ## Usage
