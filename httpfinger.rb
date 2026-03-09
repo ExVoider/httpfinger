@@ -2,7 +2,6 @@
 
 require "net/http"
 require "uri"
-require "nokogiri"
 
 DEFAULT_TIMEOUT = 10
 MAX_REDIRECTS = 5
@@ -51,12 +50,11 @@ end
 def extract_title(body)
   return nil if body.nil? || body.empty?
 
-  doc = Nokogiri::HTML(body)
-  title = doc.at("title")
-  return nil unless title
+  match = body.match(/<title[^>]*>(.*?)<\/title>/im)
+  return nil unless match
 
-  text = title.text.strip
-  text.empty? ? nil : text
+  title = match[1].gsub(/\s+/, " ").strip
+  title.empty? ? nil : title
 rescue
   nil
 end
